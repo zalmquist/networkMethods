@@ -63,3 +63,108 @@
 #' data(sampson)
 #' length(sampson)
 "sampson"
+
+#' Coleman's High School Friendship Data
+#'
+#' ames Coleman (1964) reports research on self-reported friendship ties
+#' among 73 boys in a small high school in Illinois over the 1957-1958
+#' academic year. Networks of reported ties for all 73 informants are
+#' provided for two time points (fall and spring).
+#'
+#' Both networks reflect answers to the question,
+#' “What fellows here in school do you go around with most often?”
+#' with the presence of an (i,j,k) edge indicating that j nominated
+#' k in time period i.
+#'  The data are unvalued and directed; although the self-reported ties
+#'  are highly reciprocal, unreciprocated nominations are possible.
+#'  It should be noted that, although this data is usually described as
+#'  “friendship,” the sociometric item employed might be more accurately
+#'  characterized as eliciting “frequent elective interaction.” This should
+#'  be borne in mind when interpreting this data.
+#'
+#' @format An array with 2 matrices which are each 73 by 73:
+#' \describe{
+#'   \item{coleman}{array}
+#' }
+#' @source Coleman, J. S. (1964). Introduction to Mathermatical Sociology. New York: Free Press.
+#' @examples
+#' data(coleman)
+#' dim(coleman)
+#' dimnames(coleman)[1]
+"coleman"
+
+#' Kapferer–Tailor Shop
+#'
+#' Bruce Kapferer (1972) observed interactions in a tailor shop in
+#' Zambia (then Northern Rhodesia) over a period of ten months.
+#' His focus was the changing patterns of alliance among workers
+#' during extended negotiations for higher wages.
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{kaptail.ins}{network}
+#' }
+#' @source Kapferer B. (1972). Strategy and transaction in an African factory. Manchester: Manchester University Press.
+#' @examples
+#' data(kaptail.ins)
+#' kaptail.ins
+"kaptail.ins"
+
+#' Thurman Office Network
+#'
+#' Thurman spent 16 months observing the interactions among
+#' employees in the overseas office of a large international
+#' corporation. During this time, two major disputes erupted
+#' in a subgroup of fifteen people. Thurman analyzed the
+#' outcome of these disputes in terms of the network of
+#' formal and informal associations among those involved.
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{thuroff.int}{network}
+#' }
+#' @source Thurman B. (1979). In the office: Networks and coalitions. Social Networks, 2, 47-63.
+#' data(thuroff.int)
+#' thuroff.int
+"thuroff.int"
+
+#' Correlates of War 1993: Militarized interstate disputes
+#'
+#'
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{mids_1993}{network}
+#' }
+#' @source  \url{http://www.correlatesofwar.org/}.
+#' data(mids_1993)
+#' mids_1993
+"mids_1993"
+
+#' Correlates of War 1993: Contiguity among nations
+#'
+#'
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{contig_1993}{network}
+#' }
+#' @source  \url{http://www.correlatesofwar.org/}.
+#' data(contig_1993)
+#' contig_1993
+"contig_1993"
+
+#' Correlates of War 1993: Alliances among nations
+#'
+#'
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{alliances_1993}{network}
+#' }
+#' @source  \url{http://www.correlatesofwar.org/}.
+#' data(alliances_1993)
+#' alliances_1993
+"alliances_1993"
+
+
