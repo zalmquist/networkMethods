@@ -44,7 +44,7 @@ hist(odeg, xlab="Outdegree", main="Outdegree Distribution", prob=TRUE)
 hist(ideg+odeg, xlab="Total Degree", main="Total Degree Distribution",
      prob=TRUE)
 dev.off()
-par(mfrow=c(1,1))                                       # Restore display
+
 
 # Centrality scores can also be used with other sna routines, e.g., gplot
 gplot(mids_1993, vertex.cex=(ideg+odeg)^0.5/2, vertex.sides=50,
