@@ -79,10 +79,11 @@ lab1 <- function() {"This is Lab one."}
 #' coords <- gplot(contig_1993, interactive=TRUE)   # Modify and save
 #' gplot(contig_1993, coord=coords, gmode="graph")  # Should reproduce the modified
 #' # layout
-#'
+#'\dontrun{
 #' #
 #' #Three-dimensional visualization with gplot3d (requires the rgl package)--------
-#' #
+#' # Note that this requires X11
+#'
 #' # Note: if you haven't done so, you can install the rgl package by typing
 #' # install.packages("rgl") at the command prompt (assuming you are online).
 #' # If that package is not installed, you'll get a boring error message instead
@@ -92,7 +93,7 @@ lab1 <- function() {"This is Lab one."}
 #' # the future!
 #' # Other layouts are possible here, too:
 #' gplot3d(contig_1993, label=network.vertex.names(contig_1993),mode="kamadakawai")
-#' \dontrun{
+#'
 #' #For more information....
 #' ?gplot
 #' ?gplot.layout
