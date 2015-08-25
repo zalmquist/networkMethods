@@ -36,6 +36,7 @@ abline(0, 1, lty=3)
 text(jitter(ideg), jitter(odeg), network.vertex.names(contig_1993), cex=0.75,
      col=2)   #Plot index by odeg
 
+\dontrun{
 #Plot simple histograms of the degree distribution:
 pdf("simpleHistIndOut.pdf")
 par(mfrow=c(2,2))                                       # Set up a 2x2 display
@@ -44,7 +45,7 @@ hist(odeg, xlab="Outdegree", main="Outdegree Distribution", prob=TRUE)
 hist(ideg+odeg, xlab="Total Degree", main="Total Degree Distribution",
      prob=TRUE)
 dev.off()
-
+}
 
 # Centrality scores can also be used with other sna routines, e.g., gplot
 gplot(mids_1993, vertex.cex=(ideg+odeg)^0.5/2, vertex.sides=50,
