@@ -8,9 +8,193 @@
 #' @param Empty
 #' @examples
 #' ## Practice R code
-#' matrix(c(1,2,3,4),nc=2,nr=2)
+#' a <- 3							# assignment
+#' a								# evaluation
+#'
+#' sqrt(a)						# perform an operation
+#' b <- sqrt(a)						# perform operation and save
+#' b
+#'
+#' a == a                                         # A is A?
+#' a != b                                         # A is not B
+#'
+#' ls()	# list objects in global environment
+#' #help(sqrt)						# help w/ functions
+#' #?sqrt							# same thing
+#' #help.start()						# lots of help
+#' #help.search("sqrt")					# what am I looking for?
+#' #apropos("sqr")					# it's on the tip of my tongue...
+#'
+#' rm(a)							# remove an object
+#' # Creating vectors using the concatenation operator
+#' a <- c(1,3,5)						# create a vector by concatenation
+#' a
+#' a[2]								# select the second element
+#' b <- c("one","three","five")			# also works with strings
+#' b
+#' b[2]
+#' a <- c(a,a)						# can apply recursively
+#' a
+#' a <- c(a,b)						# mixing types - who will win?
+#' a								# there can be only one!
+#'
+#' # Sequences and replication
+#' a <- seq(from=1,to=5,by=1)				# from 1 to 5 the slow way
+#' b <- 1:5						# a shortcut!
+#' a==b								# all TRUE
+#' rep(1,5)						# a lot of 1s
+#' rep(1:5,2)						# repeat an entire sequence
+#' rep(1:5,each=2)					# same, but element-wise
+#' rep(1:5,times=5:1)					# can vary the count of each element
+#'
+#' # Any and all (with vectors)
+#' a <- 1:5						# create a vector
+#' a>2								# some TRUE, some FALSE
+#' any(a>2)						# are any elements TRUE?
+#' all(a>2)						# are all elements TRUE?
+#'
+#' # From vectors to matrices
+#' a <- matrix(1:25, nr=5, nc=5)			# create a matrix the "formal" way
+#' a
+#' a[1,2]							# select a matrix element (two dimensions)
+#' a[1,]							# shortcut for ith row
+#' all(a[1,]==a[1,1:5])				# show the equivalence
+#' a[,2]							# can also perform for columns
+#' a[2:3,3:5]						# select submatrices
+#' a[-1,]							# nice trick: negative numbers omit cells!
+#' a[-2,-2]						# get rid of number two
+#'
+#' b <- cbind(1:5,1:5)					# another way to create matrices
+#' b
+#' d <- rbind(1:5,1:5)					# can perform with rows, too
+#' d
+#' try(cbind(b,d))						# no go: must have compatible dimensions!
+#' dim(b)							# what were those dimensions, anyway?
+#' dim(d)
+#' NROW(b)
+#' NCOL(b)
+#' cbind(b,b)						# here's a better example
+#'
+#' t(b)								# can transpose b
+#' cbind(t(b),d)						# now it works
+#' # Most arithmetic operators are applied element-wise
+#' a <- 1:5
+#' a + 1							# addition
+#' a * 2							# multiplication
+#' a / 3							# division
+#' a - 4							# subtraction
+#' a ^ 5							# you get the idea...
+#'
+#' a + a							# also works on pairs of vectors
+#' a * a
+#' a %*% a						# note, not element-wise!
+#' a + 1:6						# problem: need same length
+#'
+#' a <- rbind(1:5,2:6)					# same principles apply to matrices
+#' b <- rbind(3:7,4:8)
+#' a + b
+#' a / b
+#'
+#' a %*% t(b)						# matrix multiplication
+#'
+#' # Logical operators (generally) work like arithmetic ones
+#' a > 0
+#' a == b
+#' a != b
+#' !(a == b)
+#' (a>2) | (b>4)
+#' (a>2) & (b>4)
+#' (a>2) || (b>4)					# beware the "double-pipe"!
+#' (a>2) && (b>4)					# (and the "double-ampersand"!)
+#'
+#' # Ditto for many other basic transformations
+#' log(a)
+#' exp(b)
+#' sqrt(a+b)						# note that we can nest statements!
+#' log((sqrt(a+b)+a)*b)				# as recursive as we wanna be
+#' # R has many other data types.  One important type is the list.
+#' a <- list(1:5)
+#' a								# not an ordinary vector...
+#' a <- list(1:5,letters[1:3])			# can we mix types and lengths?
+#' a								# yes!
+#' b <- matrix(1:3,3,3)
+#' a <- list(1:5,letters[1:3],b)			# anything can be stuffed in here
+#' a
+#' a[[1]]							# retrieve the first item
+#' a[[2]][3]						# the letter "c"
+#' (a[[3]])[1,3]						# it's really just recursion again
+#' a <- list(boo=1:4,hoo=5)				# list elements are often named
+#' names(a)						# get the element names
+#' a[["boo"]]						# ask for it by name
+#' a$hoo							# use "$" to get what you want
+#' # a+3								# whoops - not a vector!
+#' a[[1]]+3						# that works
+#' a[[2]] <- a[[2]]*4					# can also perform assignment
+#' a$woo <- "glorp"					# works with "$"
+#' a[["foo"]] <- "shazam"				# prolonging the magic
+#' a
+#'
+#' # Another useful generalization: the data frame
+#' d <- data.frame(income=1:5,sane=c(T,T,T,T,F),name=LETTERS[1:5])  # Store multiple types
+#' d
+#' d[1,2]							# acts a lot like a matrix!
+#' d[,1]*5
+#' d[-1,]
+#' names(d)						# also acts like a list
+#' d[[2]]
+#' d$sane[3]<-FALSE
+#' d
+#' d[2,3]							# hmm - our data got factorized!
+#' d$name <- LETTERS[1:5]				# eliminate evil factors by overwriting
+#' d[2,3]
+#' d <- data.frame(income=1:5,sane=c(T,T,T,T,F),name=LETTERS[1:5],stringsAsFactors=FALSE)
+#' d								# another way to fix it
+#'
+#' d <- as.data.frame(cbind(1:5,2:6))		# can create from matrices
+#' d
+#' is.data.frame(d)					# how can we tell it's not a matrix?
+#' is.matrix(d)						# the truth comes out
+#'
+#' # When two dimensions are not enough: arrays
+#' a <- array(1:18, dim=c(2,3,3))			# now in 3D
+#' a
+#' a[1,2,3]						# selection works like a matrix
+#' a[1,2,]
+#' a[1,,]
+#' a[-1,2:3,1:2]
+#' a*5								# ditto for element-wise operations
+#' a <- array(dim=c(2,3,2,5,6))			# can have any number of dimensions
+#' dim(a)
+#' # Many packages have built-in data for testing and educational purposes
+#' #data()							# list them all
+#' #data(package="base")				# all base package
+#' #?USArrests						# get help on a data set
+#' data(USArrests)					# load the data set
+#' head(USArrests)						# view the object
+#' # R's workhorse is the "plot" command
+#' plot(USArrests$Murder,USArrests$UrbanPop)
+#' plot(USArrests$Murder,USArrests$UrbanPop,log="xy")	# log-log scale
+#' plot(USArrests$Murder,USArrests$Assault,xlab="Murder",ylab="Assault",main="My Plot")
+#'
+#' # Can also add text
+#' plot(USArrests$Murder,USArrests$Assault,xlab="Murder",ylab="Assault",main="My Plot",type="n")
+#' text(USArrests$Murder,USArrests$Assault,rownames(USArrests),cex=.5)
+#'
+#' # Histograms and boxplots are often helpful
+#' hist(USArrests$Murder)
+#'
+#' boxplot(USArrests)
 #' ## More to come!
 #' \dontrun{
+#' # We won't use them right now, but here are some useful commands:
+#' ?read.table							# a workhorse routine
+#' ?read.csv							# a specialized CSV version
+#' ?scan								# a more low-level variant
+#' apropos("read")						# list various "read" commands
+#' ?load								# loads objects in native R format
+#' ?save								# saves objects in native R format
+#' ?write.table							# counterpart to read.table
+#' apropos("write")						# various "write" functions
 #'
 #' }
 lab1 <- function() {"This is Lab one."}
@@ -262,4 +446,15 @@ lab2 <- function() {"This is Lab two."}
 #' ?AIC
 #' }
 lab3 <- function() {"This is Lab three."}
+
+
+#require(RCurl)
+#url<-"https://docs.google.com/spreadsheets/d/1_nuyyVE_bBX-p4Rrqa2WDi6LOEcdeZn5HETGg4HoJDY/pub?output=csv"
+#myCsv <- getURL(url)
+#myData<-read.csv(textConnection(myCsv))
+
+
+
+
+
 
