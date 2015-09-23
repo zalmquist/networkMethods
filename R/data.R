@@ -167,4 +167,33 @@
 #' alliances_1993
 "alliances_1993"
 
+#' Correlates of War 1993: Contiguity among nations
+#'
+#'
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{contig_1993}{network}
+#' }
+#' @source  \url{http://www.correlatesofwar.org/}.
+#' data(contig_1993)
+#' contig_1993
+"contig_1993"
+
+#' Southern Women
+#'
+#' This is the incidence matrix for the famous ``Southern Women" data set from Davis,
+#' Gardner, and Gardner's Deep South study of class and social interaction in
+#' Natchez, MS during the mid-1930s. The matrix shows the attendance of 18 women at
+#' 14 informal social events during a nine-month observation period, based on
+#' ``interviews, the records of participant observers, guest lists, and the newspapers" (DGG, p. 149).
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{sw.incidence}{matrix}
+#' }
+#' @source Davis, A., Gardner, B. B., and Gardner, M. R. (2009). Deep South: A social anthropological study of caste and class. Univ of South Carolina Press.
+#' data(sw.incidence)
+#' sw.incidence
+"sw.incidence"
 

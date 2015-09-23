@@ -12,11 +12,19 @@
 \url{http://www.correlatesofwar.org/}.
 data(contig_1993)
 contig_1993
+
+\url{http://www.correlatesofwar.org/}.
+data(contig_1993)
+contig_1993
 }
 \usage{
 contig_1993
+
+contig_1993
 }
 \description{
+Correlates of War 1993: Contiguity among nations
+
 Correlates of War 1993: Contiguity among nations
 }
 \keyword{datasets}
