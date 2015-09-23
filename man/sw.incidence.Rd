@@ -4,7 +4,7 @@
 \name{sw.incidence}
 \alias{sw.incidence}
 \title{Southern Women}
-\format{A network object:
+\format{A matrix object:
 \describe{
   \item{sw.incidence}{matrix}
 }}

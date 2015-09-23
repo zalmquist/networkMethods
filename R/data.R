@@ -188,7 +188,7 @@
 #' 14 informal social events during a nine-month observation period, based on
 #' ``interviews, the records of participant observers, guest lists, and the newspapers" (DGG, p. 149).
 #'
-#' @format A network object:
+#' @format A matrix object:
 #' \describe{
 #'   \item{sw.incidence}{matrix}
 #' }
