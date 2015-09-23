@@ -4,10 +4,11 @@ Title: Network Methods
 Version: 0.1
 Date: 2015-07-22
 Author: Zack W. Almquist <almquist@umn.edu> [aut, cre]
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Maintainer: Zack W. Almquist <almquist@umn.edu> 
 Description: Package for use with Sociology 8412, Social Network Analysis: Theory and Methods. This package provides a series of R scripts and helper functions for the lectures, labs and homeworks of the aformentioned class.
 License: GPL-3
 LazyData: TRUE
 Imports: sna,
     network,
-    statnet
+    statnet,
+    numDeriv

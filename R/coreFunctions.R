@@ -540,7 +540,7 @@ lab3 <- function() {"This is Lab three."}
 #' # Finally, note that lnam has a plot method
 #' plot(fit.x12.x12)
 #'
-lab4 <- function() {"This is Lab four."}
+lab4 <- function(){"This is Lab four."}
 
 
 #require(RCurl)
