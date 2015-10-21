@@ -197,3 +197,31 @@
 #' sw.incidence
 "sw.incidence"
 
+
+#' David Krackhardt's famous  Silicon Valley Systems study
+#'
+#' The two networks consist of friendship, as agreed upon by the ties' endpoints.
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{silsys.fr.ilas}{network}
+#' }
+#' @source
+#' data(silsys.fr.ilas)
+#' silsys.fr.ilas
+"silsys.fr.ilas"
+
+#' David Krackhardt's famous  Silicon Valley Systems study
+#'
+#' The two networks consist of advice seeking, as agreed upon by the ties' endpoints.
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{silsys.ad.ilas}{network}
+#' }
+#' @source
+#' data(silsys.ad.ilas)
+#' silsys.ad.ilas
+"silsys.ad.ilas"
+
+
