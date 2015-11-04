@@ -43,6 +43,71 @@
 #' # Examine the output directly
 #' kb1                                       # These are "blockmodel" objects
 #' summary(kb2)
+#'
+#' # Plot each model as a "blocked" data matrix
+#' lab<-kb1$block.membership[kb1$order.vector]
+#' plot.sociomatrix(kb1$blocked.data,labels=list(lab,lab))
+#' lab<-kb2$block.membership[kb2$order.vector]
+#' plot.sociomatrix(kb2$blocked.data,labels=list(lab,lab))
+#' lab<-kb3$block.membership[kb3$order.vector]
+#' plot.sociomatrix(kb3$blocked.data,labels=list(lab,lab))
+#' lab<-kb4$block.membership[kb4$order.vector]
+#' plot.sociomatrix(kb4$blocked.data,labels=list(lab,lab))
+#' lab<-kb5$block.membership[kb5$order.vector]
+#' plot.sociomatrix(kb5$blocked.data,labels=list(lab,lab))
+#'
+#' # Plot the original data, with vertices colored by block (black=1, red=2)
+#' plot(kaptail.ins,vertex.col=kb1$block.membership)
+#' plot(kaptail.ins,vertex.col=kb2$block.membership)
+#' plot(kaptail.ins,vertex.col=kb3$block.membership)
+#' plot(kaptail.ins,vertex.col=kb4$block.membership)
+#' plot(kaptail.ins,vertex.col=kb5$block.membership)
+#'
+#' # Let's try another example -- this one (from Thuroff) is undirected
+#' data(thuroff.int)
+#' plot(thuroff.int)
+#'
+#' # Fit various undirected blockmodels
+#' tb1<-block.fit(thuroff.int,c(1,1,1,0))    # Core w/in,out ties
+#' tb2<-block.fit(thuroff.int,c(1,0,0,0))    # Isolated core
+#' tb3<-block.fit(thuroff.int,c(1,NA,NA,0))  # Ignore core/periphery relations
+#' tb4<-block.fit(thuroff.int,c(1,0,0,1))    # Two cores
+#' tb5<-block.fit(thuroff.int,c(0,1,1,0))    # Bipartite structure - no cores!
+#'
+#' # Examine the results via the sociomatrix:
+#' lab<-tb1$block.membership[tb1$order.vector]
+#' plot.sociomatrix(tb1$blocked.data,labels=list(lab,lab))
+#' lab<-tb2$block.membership[tb2$order.vector]
+#' plot.sociomatrix(tb2$blocked.data,labels=list(lab,lab))
+#' lab<-tb3$block.membership[tb3$order.vector]
+#' plot.sociomatrix(tb3$blocked.data,labels=list(lab,lab))
+#' lab<-tb4$block.membership[tb4$order.vector]
+#' plot.sociomatrix(tb4$blocked.data,labels=list(lab,lab))
+#' lab<-tb5$block.membership[tb5$order.vector]
+#' plot.sociomatrix(tb5$blocked.data,labels=list(lab,lab))
+#'
+#' # For more information....
+#' #?blockmodel
+#' #?order
+#' #?plot.sociomatrix
+#' #
+#' #-Eigenvector centrality/coreness-----------------------------------------------
+#' #
+#' # Calculate eigenvector centrality for our two sample cases
+#' ev.kt<-evcent(kaptail.ins)
+#' ev.th<-evcent(thuroff.int)
+#'
+#' # How does evcent relate to block membership?  Let's compare:
+#' plot(kaptail.ins,vertex.cex=ev.kt*5+0.5,vertex.col=kb5$block.membership)
+#' plot(thuroff.int,vertex.cex=ev.th*5+0.5,vertex.col=tb5$block.membership)
+#'
+#' # Can plot the sociomatrices, sorted by evcent (note the sort order)
+#' plot.sociomatrix(kaptail.ins[order(ev.kt),order(ev.kt)])
+#' plot.sociomatrix(thuroff.int[order(ev.th),order(ev.th)])
+#'
+#' # For more information....
+#' # ?evcent
+#'
 block.fit<-function (g, model, measure = c("pearson", "negdist"), diag = FALSE,
           iter = 3000, temp.init = 10, cool = 0.995, hill.climb.refine = TRUE,
           seed = NULL, verbose = TRUE)
