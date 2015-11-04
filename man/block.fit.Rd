@@ -9,9 +9,9 @@ block.fit(g, model, measure = c("pearson", "negdist"), diag = FALSE,
   seed = NULL, verbose = TRUE)
 }
 \arguments{
-\item{g}{: a network to be analyzed}
+\item{g}{a network to be analyzed}
 
-\item{model}{: a vector or matrix specifying the blockmodel to be fit.  If passed
+\item{model}{a vector or matrix specifying the blockmodel to be fit.  If passed
 as a vector, the argument should be given column-wise.  For instance,
 two-class blockmodels are fit by passing a vector of the form
 c(b11,b21,b12,b22), where bij is the value of the i,j cell in the
@@ -19,23 +19,23 @@ blockmodel.  Usually, these values are 1 or 0, although NAs are allowed
 (and have the effect of removing the indicated cells from consideration
 when evaluating goodness of fit).}
 
-\item{measure}{: "pearson" for the standard correlation coefficent (may produce
+\item{measure}{"pearson" for the standard correlation coefficent (may produce
 warnings, which are harmless) or "negdist" for the inverse absolute
 distance.}
 
-\item{diag}{: should the diagonal be included?}
+\item{diag}{should the diagonal be included?}
 
-\item{iter}{: number of annealing iterations to employ.}
+\item{iter}{number of annealing iterations to employ.}
 
-\item{cool}{: cooling factor for the annealer.}
+\item{temp.init}{initial temperature for the annealer.}
 
-\item{hill.climb.refine}{: should the annealing solution be further refined using}
+\item{cool}{cooling factor for the annealer.}
 
-\item{seed}{: an optional vector of initial group memberships.}
+\item{hill.climb.refine}{should the annealing solution be further refined using}
 
-\item{verbose}{: should the function provide diagnostic output?}
+\item{seed}{an optional vector of initial group memberships.}
 
-\item{temp.init:}{initial temperature for the annealer.}
+\item{verbose}{should the function provide diagnostic output?}
 
 \item{hill-climbing?}{(Can be slow, but guarantees convergence to a local
 optimum.}

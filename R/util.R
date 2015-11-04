@@ -2,26 +2,26 @@
 #'
 #'\code{block.fit} returns an object of class "blockmodel."
 #'
-#' @param g : a network to be analyzed
-#' @param model : a vector or matrix specifying the blockmodel to be fit.  If passed
+#' @param g  a network to be analyzed
+#' @param model  a vector or matrix specifying the blockmodel to be fit.  If passed
 #'     as a vector, the argument should be given column-wise.  For instance,
 #'     two-class blockmodels are fit by passing a vector of the form
 #'     c(b11,b21,b12,b22), where bij is the value of the i,j cell in the
 #'     blockmodel.  Usually, these values are 1 or 0, although NAs are allowed
 #'     (and have the effect of removing the indicated cells from consideration
 #'     when evaluating goodness of fit).
-#' @param measure : "pearson" for the standard correlation coefficent (may produce
+#' @param measure  "pearson" for the standard correlation coefficent (may produce
 #'     warnings, which are harmless) or "negdist" for the inverse absolute
 #'     distance.
-#' @param diag : should the diagonal be included?
-#' @param   iter : number of annealing iterations to employ.
-#' @param   temp.init: initial temperature for the annealer.
-#' @param   cool : cooling factor for the annealer.
-#' @param   hill.climb.refine : should the annealing solution be further refined using
+#' @param diag  should the diagonal be included?
+#' @param   iter  number of annealing iterations to employ.
+#' @param   temp.init initial temperature for the annealer.
+#' @param   cool  cooling factor for the annealer.
+#' @param   hill.climb.refine  should the annealing solution be further refined using
 #' @param     hill-climbing?  (Can be slow, but guarantees convergence to a local
 #'     optimum.
-#' @param   seed : an optional vector of initial group memberships.
-#' @param   verbose : should the function provide diagnostic output?
+#' @param   seed  an optional vector of initial group memberships.
+#' @param   verbose  should the function provide diagnostic output?
 #'
 #' @return An object of class "blockmodel," with the additional list element block.gof.
 #'   (Note that this object can be printed, etc. using the standard methods
