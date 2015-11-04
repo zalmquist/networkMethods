@@ -49,7 +49,8 @@ An object of class "blockmodel," with the additional list element block.gof.
 \code{block.fit} returns an object of class "blockmodel."
 }
 \examples{
-data(kaptail.ins)
+require(sna)
+  data(kaptail.ins)
   plot(kaptail.ins)
 # Let's try fitting some blockmodels.  Here are several variants on C/P:
 kb1<-block.fit(kaptail.ins,c(1,1,1,0))   # Core w/in,out ties
