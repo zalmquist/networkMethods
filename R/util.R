@@ -30,6 +30,7 @@
 #' @author Carter T. Butts, University of California, Irvine
 #'   @examples
 #'   require(sna)
+#'   require(network)
 #'   data(kaptail.ins)
 #'   plot(kaptail.ins)
 #' # Let's try fitting some blockmodels.  Here are several variants on C/P:

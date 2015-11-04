@@ -50,6 +50,7 @@ An object of class "blockmodel," with the additional list element block.gof.
 }
 \examples{
 require(sna)
+  require(network)
   data(kaptail.ins)
   plot(kaptail.ins)
 # Let's try fitting some blockmodels.  Here are several variants on C/P:
