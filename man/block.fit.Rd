@@ -62,4 +62,7 @@ kb5<-block.fit(kaptail.ins,c(1,NA,NA,0)) # Ignore core/periphery interactions
 kb1                                       # These are "blockmodel" objects
 summary(kb2)
 }
+\author{
+Carter T. Butts, University of California, Irvine
+}
 

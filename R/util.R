@@ -27,6 +27,7 @@
 #'   (Note that this object can be printed, etc. using the standard methods
 #'   for this class.)
 #'
+#' @author Carter T. Butts, University of California, Irvine
 #'   @examples
 #'
 #'   data(kaptail.ins)
