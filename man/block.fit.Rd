@@ -37,7 +37,7 @@ distance.}
 
 \item{verbose}{should the function provide diagnostic output?}
 
-\item{hill-climbing?}{(Can be slow, but guarantees convergence to a local
+\item{hill-climbing?}{(Can be slow, but guarantees convergence to a local optimum.)
 optimum.}
 }
 \value{

@@ -18,7 +18,7 @@
 #' @param   temp.init initial temperature for the annealer.
 #' @param   cool  cooling factor for the annealer.
 #' @param   hill.climb.refine  should the annealing solution be further refined using
-#' @param     hill-climbing?  (Can be slow, but guarantees convergence to a local
+#' @param     hill-climbing?  (Can be slow, but guarantees convergence to a local optimum.)
 #'     optimum.
 #' @param   seed  an optional vector of initial group memberships.
 #' @param   verbose  should the function provide diagnostic output?
