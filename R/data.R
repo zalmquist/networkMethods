@@ -124,6 +124,8 @@
 #'   \item{thuroff.int}{network}
 #' }
 #' @source Thurman B. (1979). In the office: Networks and coalitions. Social Networks, 2, 47-63.
+#'
+#' @examples
 #' data(thuroff.int)
 #' thuroff.int
 "thuroff.int"
@@ -137,6 +139,8 @@
 #'   \item{mids_1993}{network}
 #' }
 #' @source  \url{http://www.correlatesofwar.org/}.
+#'
+#' @examples
 #' data(mids_1993)
 #' mids_1993
 "mids_1993"

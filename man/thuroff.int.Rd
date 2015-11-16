@@ -10,8 +10,6 @@
 }}
 \source{
 Thurman B. (1979). In the office: Networks and coalitions. Social Networks, 2, 47-63.
-data(thuroff.int)
-thuroff.int
 }
 \usage{
 thuroff.int
@@ -23,6 +21,10 @@ corporation. During this time, two major disputes erupted
 in a subgroup of fifteen people. Thurman analyzed the
 outcome of these disputes in terms of the network of
 formal and informal associations among those involved.
+}
+\examples{
+data(thuroff.int)
+thuroff.int
 }
 \keyword{datasets}
 

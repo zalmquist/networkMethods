@@ -10,14 +10,16 @@
 }}
 \source{
 \url{http://www.correlatesofwar.org/}.
-data(mids_1993)
-mids_1993
 }
 \usage{
 mids_1993
 }
 \description{
 Correlates of War 1993: Militarized interstate disputes
+}
+\examples{
+data(mids_1993)
+mids_1993
 }
 \keyword{datasets}
 
