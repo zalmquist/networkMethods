@@ -228,4 +228,37 @@
 #' silsys.ad.ilas
 "silsys.ad.ilas"
 
+#' Krackhardt’s group of 21 high-tech managers, self-reported advice-seeking
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{nkad}{network}
+#' }
+#' @source
+#' data(nkad)
+#' nkad
+"nkad"
+
+#' Krackhardt’s group of 21 high-tech managers, self-reported friendship
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{nkfr}{network}
+#' }
+#' @source
+#' data(nkfr)
+#' nkfr
+"nkfr"
+
+#' Krackhardt’s group of 21 high-tech managers, self-reported formal reporting
+#'
+#' @format A network object:
+#' \describe{
+#'   \item{nkrep}{network}
+#' }
+#' @source
+#' data(nkrep)
+#' nkrep
+"nkrep"
+
 
